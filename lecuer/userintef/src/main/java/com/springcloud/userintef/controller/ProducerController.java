@@ -23,7 +23,7 @@ public class ProducerController {
     /**
      * 新增消息队列(延迟)
      */
-    @RequestMapping(value = "/add/delay/queue", method = RequestMethod.GET)
+    @RequestMapping(value = "/addLazyQueue", method = RequestMethod.GET)
     public void addDelayQueue() {
         System.out.println(LocalDateTime.now());
         activeManager.delaySend("success", "beyondLiDelayQueueTest", 5000L);
